@@ -1,7 +1,8 @@
 import { defineConfig } from 'cypress';
-import fs from 'fs';
+import { cloudPlugin } from 'cypress-cloud/plugin';
 
 export default defineConfig({
+  projectId: 'cypress-playground',
   chromeWebSecurity: false,
   env: {
     APP_URL: 'http://localhost:3000',
@@ -13,23 +14,11 @@ export default defineConfig({
     openMode: 0,
   },
   video: false,
-  projectId: 'cypress-playground',
   scrollBehavior: false,
   numTestsKeptInMemory: 20,
   e2e: {
-    // We've imported your old cypress plugins here.
-    // You may want to clean this up later by importing these.
     setupNodeEvents(on, config) {
-      on('task', {
-        readFileMaybe(filename) {
-          if (fs.existsSync(filename)) {
-            return fs.readFileSync(filename, 'utf8');
-          }
-
-          return null;
-        },
-      });
-      return config;
+      return cloudPlugin(on, config);
     },
     baseUrl: 'http://localhost:3000',
     specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx}',
