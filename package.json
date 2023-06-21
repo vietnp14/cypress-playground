@@ -22,7 +22,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "cypress": "node_modules/.bin/cypress open"
+    "cypress": "node_modules/.bin/cypress open",
+    "cypress-cloud": "npx cypress-cloud run --parallel --record --key ObCzeMSyAUhfJ8Xs --ci-build-id hello-sorry-cypress",
+    "cypress-io": "npx cypress run --record --key ce0f83db-d0b7-4f37-a793-76293d1b911b"
   },
   "eslintConfig": {
     "extends": [
