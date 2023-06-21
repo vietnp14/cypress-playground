@@ -14,8 +14,6 @@ Install packages use:
   npm i
 ```
 
-Copy file `docker-compose.minio.yml` to computer root. (In the same place with Documents, Desktop, ...)
-
 ## Start App
 
 To start app use:
