@@ -1,46 +1,66 @@
-# Getting Started with Create React App
+# Getting Started with Cypress Playground
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+This project is created to play with Cypress.io and Sorry-cypress.
 
-In the project directory, you can run:
+## Setup Projects
+---
+Download [Docker](https://www.docker.com/products/docker-desktop/)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Install packages use:
+```
+  npm i
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Copy file `docker-compose.minio.yml` to computer root. (In the same place with Documents, Desktop, ...)
 
-### `npm test`
+## Start App
+---
+To start app use:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> App starting is required when running tests.
 
-### `npm run build`
+```
+  npm run start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Available Test Scripts
+---
+### `1. Cypress.io:`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To play with cypress.io use:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+  npm run cypress-io
+```
 
-### `npm run eject`
+This script will run tests with recording option and data will be sent to Cypress.io.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `2. Sorry-cypress:`
+Run below script in computer root:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+  docker-compose -f ./docker-compose.minio.yml up
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+This script will init and setup docker containers of sorry-cypress to store test data and run tests.
+
+To play with sorry-cypress use:
+
+```
+  npm run cypress-cloud
+```
+
+This script will run tests with recording option. Because we host sorry-cypress in local, data will be saved to local Database (MongoDB).
+
+We can view the Dashboard at [http://localhost:8080](http://localhost:8080)
+
 
 ## Learn More
+---
+To learn more about Cypress.io, check out the [Cypress Cloud](https://docs.cypress.io/guides/cloud/introduction).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+To learn more about sorry-cypress, check out the [sorry-cypress](https://docs.sorry-cypress.dev/guide/get-started).
