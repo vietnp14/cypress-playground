@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 This project is created to play with Cypress.io and Sorry-cypress.
 
 ## Setup Projects
----
+
 Download [Docker](https://www.docker.com/products/docker-desktop/)
 
 
@@ -17,7 +17,7 @@ Install packages use:
 Copy file `docker-compose.minio.yml` to computer root. (In the same place with Documents, Desktop, ...)
 
 ## Start App
----
+
 To start app use:
 
 > App starting is required when running tests.
@@ -27,7 +27,7 @@ To start app use:
 ```
 
 ## Available Test Scripts
----
+
 ### `1. Cypress.io:`
 
 To play with cypress.io use:
@@ -40,6 +40,7 @@ This script will run tests with recording option and data will be sent to Cypres
 
 
 ### `2. Sorry-cypress:`
+
 Run below script in computer root:
 
 ```
@@ -60,7 +61,7 @@ We can view the Dashboard at [http://localhost:8080](http://localhost:8080)
 
 
 ## Learn More
----
+
 To learn more about Cypress.io, check out the [Cypress Cloud](https://docs.cypress.io/guides/cloud/introduction).
 
 To learn more about sorry-cypress, check out the [sorry-cypress](https://docs.sorry-cypress.dev/guide/get-started).
