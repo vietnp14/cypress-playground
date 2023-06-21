@@ -2,7 +2,7 @@ import { defineConfig } from 'cypress';
 import { cloudPlugin } from 'cypress-cloud/plugin';
 
 export default defineConfig({
-  projectId: 'cypress-playground',
+  projectId: 'w8xuik',
   chromeWebSecurity: false,
   env: {
     APP_URL: 'http://localhost:3000',
@@ -13,7 +13,7 @@ export default defineConfig({
     runMode: 2,
     openMode: 0,
   },
-  video: false,
+  video: true,
   scrollBehavior: false,
   numTestsKeptInMemory: 20,
   e2e: {
